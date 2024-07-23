@@ -8,10 +8,13 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/stylesheet.css') }}">
     <link rel="shortcut icon" href="{{ url_for('static', filename='clipped_wings.ico') }}">
     <script defer src="{{ url_for('static', filename='js/site.js') }}"></script>
-    <title>4v4 Passtime</title>
+    <title>4v4 PASS Time</title>
 </head>
 
 <body>
+    <div class="topbar">
+        <img class="topbarImage" src="{{ url_for('static', filename='imgs/big_logo_trans.png') }}" alt="passtime logo">
+    </div>
     <div class="wrapper">
         <header>
             <div class="backgroundsContainer">
@@ -23,18 +26,20 @@
                 <img class="background" src="{{ url_for('static', filename='imgs/stonework.png') }}">
             </div>
             <div class="centered titleContainer">
-                <img src="{{ url_for('static', filename='imgs/big_logo_trans.png') }}" alt="passtime logo in foreground"
-                    class="foreground">
                 <h1 class="title">4v4 PASS Time</h1>
             </div>
+            <div class="regionContainer">
+                <h2>CHOOSE YOUR REGION</h2>
+            </div>
+            <div class="centered discordTop">
+                <button class="discordButtons" onclick="window.location.href='https://discord.com/invite/Vrk3Etg';">NA</button>
+                <button class="discordButtons" onclick="window.location.href='https://discord.gg/K5uUfGa8yK';">EU</button>
+            </div>
+            <div class="centered discordBottom">
+                <button class="discordButtons" onclick="window.location.href='https://discord.gg/beWJ8mBQQ3';">AU</button>
+                <button class="discordButtons" onclick="window.location.href='https://discord.gg/qDpWPAgHEQ';">AS</button>
+            </div>
         </header>
-        <div class="downButtonClass">
-            <button class="downPointer" onclick="scrollToSectionOne()">
-                <span class="chevron"></span>
-                <span class="chevron overlay"></span>
-            </button>
-        </div>
-
         <main>
             <div class="sectionBackground">
                 <section id="sectionOne" class="hidden">
@@ -88,7 +93,7 @@
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     <hr class="rounded">
-                    <h3><a href="https://discord.passtime.tf" id="discord">Join our Discord!</a></h3>
+                    <!-- <h3><a href="https://discord.passtime.tf" id="discord">Join our Discord!</a></h3> -->
                     <p><iframe src="https://discord.com/widget?id=471798073996345344&theme=dark" width=100% height="500"
                             allowtransparency="true" frameborder="0"
                             sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
@@ -97,10 +102,9 @@
             </div>
         </main>
         <footer>
-            Author: @averyaveravery and @nikeshoe92 on Discord
+            Author: @averyaveryavery and @nikeshoe92 on Discord
         </footer>
     </div>
 </body>
 
 </html>
-
