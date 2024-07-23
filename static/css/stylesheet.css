@@ -26,16 +26,32 @@
 
 .title {
     text-align: center;
-    font-size: 5rem;
+    font-size: 10vmin;
     font-family: Montserrat;
     color: white;
     text-shadow: 0 0 5px #111;
+    transform: translateY(-50%);
     /*-webkit-text-stroke-width: 1.5px;
     -webkit-text-stroke-color: black;*/
 }
 
 .active {
   opacity: 1;
+}
+
+.topbar {
+    background-color: #111;
+    position: sticky;
+    top: 0;
+    height: 8%;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 0 5px #111;
+}
+
+.topbarImage {
+    height: 50%;
+    transform: translateY(50%);
 }
 
 .wrapper {
@@ -61,8 +77,8 @@
 }
 
 .foreground {
-    aspect-ratio: 3 / 1;
-    position: fixed;
+    aspect-ratio: 2 / 1;
+    position: absolute;
     height: 300px;
     max-width: 40%;
     top: 5%;
@@ -77,23 +93,6 @@
     max-width: 90%;
 }
 
-/*#region downbutton */
-.chevron {
-    display:block;
-    position:absolute;
-} .chevron::before {
-    border-style: solid;
-    border-width: 0.2em 0.2em 0 0;
-    font-size: 250%;
-    color: rgba(0,0,0,1);
-    content: '';
-    display: flex;
-    height: 0.55em;
-    vertical-align: top;
-    width: 0.55em;
-    transform: rotate(135deg);
-}
-
 .overlay {
     position:relative;
     top: 1000%;
@@ -102,13 +101,61 @@
     scale: 90%;
 }
 
-.downButtonClass {
+.regionContainer {
     position: relative;
+    text-align: center;
+    justify-content: center;
+    font-size: 1.2vmax;
+    font-family: Montserrat;
+    color: white;
+    text-shadow: 0 0 5px #111;
+    width: 100%;
+    bottom: 50%;
+    z-index: 1;
+}
+
+.discordTop {
+    position: relative;
+    display: flex;
+    grid-column-gap: 2vh;
+    z-index: 1;
+    bottom: 40vh;
+}
+
+.discordBottom {
+    position: relative;
+    display: flex;
+    grid-column-gap: 2vh;
+    z-index: 1;
+    bottom: 38vh;
+    }
+
+.discordButtons {
     display: flex;
     justify-content: center;
     align-items: center;
-    bottom: 15%;
-    z-index: 1;
+    background-color: #ffbe2c;
+    color: #111;
+    border: none;
+    font-family: SourceSans3Bold;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0 1.3vh;
+    aspect-ratio: 4 / 3;
+    box-shadow: 0 0 5px #111;
+}
+
+.btop {
+    transform: translateY(50%);
+}
+
+.bbottom {
+    bottom: 30%;
+}
+
+/* change to active if you want idk */
+.discordButtons:hover {
+    background-color: #ffd16a;
 }
 
 .downPointer {
@@ -145,6 +192,7 @@ main {
 
 *, html {
     scroll-behavior: smooth !important;
+    overflow: hidden;
 }
 
 p {
@@ -194,4 +242,10 @@ section {
     font-size: 2rem;
     color: white;
     position: relative;
+}
+
+/* will make this look better later,
+** hiding for now. */
+footer {
+    hidden: true;
 }
