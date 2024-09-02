@@ -37,3 +37,11 @@ function changeBackground()
 }
 
 setInterval(changeBackground, 6000);
+
+function confirmRedirect(url, region)
+{
+	var proceed = window.confirm("This will redirect you to the " + region + " Passtime Discord. Are you sure you want to proceed?");
+	if (proceed) {
+		window.location.href=url
+	}
+}
