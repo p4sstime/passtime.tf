@@ -8,6 +8,10 @@ app = Flask(__name__)
 def hello():
     return render_template("index.html")
 
+@app.route("/maps")
+def maps():
+    return render_template('maps.html')
+
 if __name__ == "__main__":
     port = 5000
     if len(sys.argv) > 1:
