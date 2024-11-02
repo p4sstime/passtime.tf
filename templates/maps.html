@@ -8,7 +8,16 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/stylesheet.css') }}">
     <link rel="shortcut icon" href="{{ url_for('static', filename='clipped_wings.ico') }}">
     <script defer src="{{ url_for('static', filename='js/site.js') }}"></script>
-    <title>4v4 PASS Time</title>
+    <title>Maps</title>
+    <style>
+        header {
+            height: 40%;
+        }
+
+        .title{
+            transform: translateY(0%);
+        }
+    </style>
 </head>
 
 <body>
@@ -26,80 +35,15 @@
                 <img class="background" src="{{ url_for('static', filename='imgs/stonework.png') }}">
             </div>
             <div class="centered titleContainer">
-                <h1 class="title">4v4 PASS Time</h1>
-            </div>
-            <div class="regionContainer">
-                <h2>CHOOSE YOUR REGION</h2>
-            </div>
-            <div class="centered discordTop">
-                <button class="discordButtons" onclick="confirmRedirect('https://na.discord.passtime.tf','North American');">NA</button>
-                <button class="discordButtons" onclick="confirmRedirect('https://eu.discord.passtime.tf','European');">EU</button>
-            </div>
-            <div class="centered discordBottom">
-                <button class="discordButtons" onclick="confirmRedirect('https://au.discord.passtime.tf', 'Australian');">AU</button>
-                <button class="discordButtons" onclick="confirmRedirect('https://as.discord.passtime.tf', 'Asian');">AS</button>
-				<button class="discordButtons" onclick="confirmRedirect('https://sa.discord.passtime.tf', 'South American');">SA</button>
+                <h1 class="title">Maps</h1>
             </div>
         </header>
         <main>
             <div class="sectionBackground">
                 <section id="sectionOne" class="hidden">
-                    <h3>What is 4v4 PASS Time?</h3>
-                    <p>
-                        4v4 PASS Time is a competitive basketball-like gamemode of TF2 focusing more on fast-paced,
-                        skillful
-                        gameplay than its casual counterpart. It challenges teams to use their mechanical skills (rocket
-                        jumps, airshots, trimps, surfs, etc) as well as solid teamwork and communication.
-                    </p>
-                    <h3>What basic information should I know?</h3>
-                    <p>
-                        <iframe width="100%" src="https://www.youtube.com/embed/t01sfcj1qPw?si=rXGq3yYTgIXU1c6e"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        4v4 Passtime features a heavily restrictive whitelist compared to casual TF2 or 6v6 competitive.
-                        To
-                        encourage the skillful, competitive play we desired, the community decided to take an approach
-                        to
-                        the whitelist as moreso allowing what we thought was fun instead of banning what we thought was
-                        unfun. The full whitelist is hosted here <a href="https://whitelist.tf/14161">whitelist.tf</a>.
-                        Only
-                        soldier, demoknight, and medic are allowed. For a team of 4 there are class limits of three
-                        soldiers, one medic, and one demoman.
-                    </p>
-                    <h3>How do I play?</h3>
-                    <p>
-                        You can play by joining the <a href="https://discord.passtime.tf">Discord.</a> The server
-                        frequently
-                        runs <a href="https://en.wikipedia.org/wiki/Pick-up_game">PUGs</a>. By participating in PUGs,
-                        you
-                        can show your skill and climb up the ranks from Passtime Newcomer to Passtime Grandmaster.
-                        Additionally, <a href="https://rgl.gg/Public/about/FrontPage/Intro/default">RGL</a> and the
-                        community Discord collaborate to run passtime cups where you can test your skill and compete for
-                        keys.
-                    </p>
-                    <p>
-                        Anyone is welcome to join and learn. PUGs will be balanced based on your skill level so you do
-                        not
-                        need to worry about holding your team back if you are new.
-                    </p>
-                    <p>
-                        For information on running your own server, please consult our <a
-                            href="https://github.com/blakeplusplus/p4sstime">Github page.</a>
-                        
+                   <a href="pass_arena2"><button class="maps">pass_arena2</button></a>
 
-                    <h3>Watch the most recent highlight video!</h3>
-                    <iframe width="100%"
-                        src="https://www.youtube.com/embed/videoseries?si=PFPlxbDOmdB9lwgj&amp;list=PLYpgF3IqEG3HWUL3Vd9Z_YWxlmP9uBKoJ"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    <hr class="rounded">
-                    <!-- <h3><a href="https://discord.passtime.tf" id="discord">Join our Discord!</a></h3> -->
-                    <p><iframe src="https://discord.com/widget?id=471798073996345344&theme=dark" width=100% height="500"
-                            allowtransparency="true" frameborder="0"
-                            sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
-                    </p>
+                   
                 </section>
             </div>
         </main>
