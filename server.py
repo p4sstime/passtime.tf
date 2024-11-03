@@ -16,6 +16,10 @@ def maps():
 def pass_arena2():
     return render_template('pass_arena2.html')
 
+@app.route("/pass_stadium")
+def pass_stadium():
+    return render_template('pass_stadium.html')
+
 if __name__ == "__main__":
     port = 5000
     if len(sys.argv) > 1:
