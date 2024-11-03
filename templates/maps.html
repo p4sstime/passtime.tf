@@ -21,6 +21,7 @@
         p {
             float: left;
             margin: auto;
+            line-height:98%;
         }
 
         button {
@@ -64,10 +65,50 @@
             <div class="sectionBackground">
                 <section id="sectionOne" class="hidden">
                     <br> <!-- this whole button section is jank as fuck but I DON'T CARE !!!!!!!! feel free to correct this -->
-                    <a href="pass_arena2"><button><img class="thumbnails" src="{{ url_for('static', filename='imgs/arena2.png') }}"><p style="font-size:xx-large;">pass_arena2</p><br><br><br><p>Author: Jaguar<br>Contributors: exer, EaasyE, Danmar, Crutch<br>The original 4v4 PASS Time Map.</p></button></a>
+                    <a href="pass_arena2"><button>
+                        <img class="thumbnails" src="{{ url_for('static', filename='imgs/arena2.png') }}">
+                            <p style="font-size:xx-large;">pass_arena2</p><p style="font-size:x-large;float:right">by Jaguar</p>
+                            <br><br>
+                            <p style="text-align:left;">Contributors: exer, EaasyE, Danmar, Crutch</p>
+                            <br><br><br><br>
+                            <p style="text-align:left;font-size:x-large;line-height:100%;">The original.</p>
+                    </button></a>
                     <div style="line-height:25%;"><br></div> <!-- this is jank as fuck and I HATE IT !!!!! do not care enough to figure out how to correct it tho-->                    
-                    <a href="pass_stadium"><button><img class="thumbnails" src="{{ url_for('static', filename='imgs/stadium.png') }}"><p style="font-size:xx-large;">pass_stadium</p><br><br><br><p>Author: exer<br><br>exer's first 4v4 PASS Time map, highly iterated and polished.</p></button></a>
-                   
+                    <a href="pass_stadium"><button>
+                        <img class="thumbnails" src="{{ url_for('static', filename='imgs/stadium.png') }}">
+                            <p style="font-size:xx-large;">pass_stadium</p><p style="font-size:x-large;float:right">by exer</p>
+                            <br><br><br><br><br><br>
+                            <p style="text-align:left;font-size:x-large;line-height:100%;">The Superbowl, but bigger.</p>
+                    </button></a>
+                    <div style="line-height:25%;"><br></div>
+                    <a href="pass_greenhouse"><button>
+                        <img class="thumbnails" src="{{ url_for('static', filename='imgs/greenhouse.png') }}">
+                            <p style="font-size:xx-large;">pass_greenhouse</p><p style="font-size:x-large;float:right">by exer</p>
+                            <br><br><br><br><br><br>
+                            <p style="text-align:left;font-size:x-large;line-height:100%;">Now eco-friendly!</p>
+                    </button></a>
+                    <div style="line-height:25%;"><br></div>
+                    <a href="pass_stonework"><button>
+                        <img class="thumbnails" src="{{ url_for('static', filename='imgs/stonework.png') }}">
+                            <p style="font-size:xx-large;">pass_stonework</p><p style="font-size:x-large;float:right">by exer</p>
+                            <br><br><br><br><br><br>
+                            <p style="text-align:left;font-size:x-large;line-height:100%;">Ancient ruins with ancient secrets.</p>
+                    </button></a>
+                    <div style="line-height:25%;"><br></div>
+                    <a href="pass_ufo"><button>
+                        <img class="thumbnails" src="{{ url_for('static', filename='imgs/ufo.png') }}">
+                            <p style="font-size:xx-large;">pass_ufo</p><p style="font-size:x-large;float:right">by DropKnock</p>
+                            <br><br><br><br><br><br>
+                            <p style="text-align:left;font-size:x-large;line-height:100%;">Whoever loses gets probed.</p>
+                    </button></a>
+                    <div style="line-height:25%;"><br></div>
+                    <a href="pass_colosseum2"><button>
+                        <img class="thumbnails" src="{{ url_for('static', filename='imgs/colosseum2.png') }}">
+                            <p style="font-size:xx-large;">pass_colosseum2</p><p style="font-size:x-large;float:right">by exer</p>
+                            <br><br><br><br><br><br>
+                            <p style="text-align:left;font-size:x-large;line-height:100%;">A modern reimagining of two classics.</p>
+                    </button></a>
+                    <br><br><br><br><br><br> <!--the bottom line gets hidden and idk why so i'm just doing this till it gets fixed. not like it really matters if it gets fixed tho-->
                 </section>
             </div>
         </main>
