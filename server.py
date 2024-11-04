@@ -12,29 +12,37 @@ def hello():
 def maps():
     return render_template('maps.html')
 
-@app.route("/pass_arena2")
+@app.route("/maps/pass_arena2")
 def pass_arena2():
     return render_template('pass_arena2.html')
 
-@app.route("/pass_stadium")
+@app.route("/maps/pass_stadium")
 def pass_stadium():
     return render_template('pass_stadium.html')
 
-@app.route("/pass_greenhouse")
+@app.route("/maps/pass_greenhouse")
 def pass_greenhouse():
     return render_template('pass_greenhouse.html')
 
-@app.route("/pass_stonework")
+@app.route("/maps/pass_stonework")
 def pass_stonework():
     return render_template('pass_stonework.html')
 
-@app.route("/pass_ufo")
+@app.route("/maps/pass_ufo")
 def pass_ufo():
     return render_template('pass_ufo.html')
 
-@app.route("/pass_colosseum2")
+@app.route("/maps/pass_colosseum2")
 def pass_colosseum2():
     return render_template('pass_colosseum2.html')
+
+@app.route("/maps/pass_manndamm")
+def pass_manndamm():
+    return render_template('pass_manndamm.html')
+
+@app.route("/maps/pass_maple")
+def pass_maple():
+    return render_template('pass_maple.html')
 
 if __name__ == "__main__":
     port = 5000
