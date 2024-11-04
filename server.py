@@ -48,6 +48,10 @@ def pass_maple():
 def pass_aerosol():
     return render_template('pass_aerosol.html')
 
+@app.route("/maps/pass_mario")
+def pass_mario():
+    return render_template('pass_mario.html')
+
 if __name__ == "__main__":
     port = 5000
     if len(sys.argv) > 1:
