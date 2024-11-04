@@ -44,6 +44,10 @@ def pass_manndamm():
 def pass_maple():
     return render_template('pass_maple.html')
 
+@app.route("/maps/pass_aerosol")
+def pass_aerosol():
+    return render_template('pass_aerosol.html')
+
 if __name__ == "__main__":
     port = 5000
     if len(sys.argv) > 1:
