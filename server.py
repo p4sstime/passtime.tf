@@ -60,6 +60,14 @@ def pass_amperage():
 def pass_plexiglass():
     return render_template('pass_plexiglass.html')
 
+@app.route("/maps/pass_torii")
+def pass_torii():
+    return render_template('pass_torii.html')
+
+@app.route("/maps/pass_boutique")
+def pass_boutique():
+    return render_template('pass_boutique.html')
+
 if __name__ == "__main__":
     port = 5000
     if len(sys.argv) > 1:
