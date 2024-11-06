@@ -52,6 +52,14 @@ def pass_aerosol():
 def pass_mario():
     return render_template('pass_mario.html')
 
+@app.route("/maps/pass_amperage")
+def pass_amperage():
+    return render_template('pass_amperage.html')
+
+@app.route("/maps/pass_plexiglass")
+def pass_plexiglass():
+    return render_template('pass_plexiglass.html')
+
 if __name__ == "__main__":
     port = 5000
     if len(sys.argv) > 1:
