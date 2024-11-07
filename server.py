@@ -140,6 +140,14 @@ def pass_experiment1():
 def arena_glass():
     return render_template('arena_glass.html')
 
+@app.route("/maps/pass_frag")
+def pass_frag():
+    return render_template('pass_frag.html')
+
+@app.route("/maps/pass_mountain")
+def pass_mountain():
+    return render_template('pass_mountain.html')
+
 if __name__ == "__main__":
     port = 5000
     if len(sys.argv) > 1:
