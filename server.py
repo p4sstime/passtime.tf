@@ -132,6 +132,14 @@ def pass_colosseum():
 def pass_smalltown():
     return render_template('pass_smalltown.html')
 
+@app.route("/maps/pass_experiment1")
+def pass_experiment1():
+    return render_template('pass_experiment1.html')
+
+@app.route("/maps/arena_glass")
+def arena_glass():
+    return render_template('arena_glass.html')
+
 if __name__ == "__main__":
     port = 5000
     if len(sys.argv) > 1:
