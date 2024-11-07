@@ -116,6 +116,14 @@ def pass_arena3():
 def pass_medieval_arena():
     return render_template('pass_medieval_arena.html')
 
+@app.route("/maps/pass_waterpolo2")
+def pass_waterpolo2():
+    return render_template('pass_waterpolo2.html')
+
+@app.route("/maps/pass_ammo")
+def pass_ammo():
+    return render_template('pass_ammo.html')
+
 if __name__ == "__main__":
     port = 5000
     if len(sys.argv) > 1:
