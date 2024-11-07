@@ -68,6 +68,14 @@ def pass_torii():
 def pass_boutique():
     return render_template('pass_boutique.html')
 
+@app.route("/maps/pass_ore")
+def pass_ore():
+    return render_template('pass_ore.html')
+
+@app.route("/maps/pass_greece")
+def pass_greece():
+    return render_template('pass_greece.html')
+
 if __name__ == "__main__":
     port = 5000
     if len(sys.argv) > 1:
