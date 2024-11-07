@@ -15,4 +15,7 @@ A custom port can be specified by appending another argument like so:
 ```
 $ python server.py 1234
 ```
-
+Running in debug mode is best for troubleshooting and diagnosing issues.
+```
+$ python server.py --debug run
+```
