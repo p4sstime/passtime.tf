@@ -76,6 +76,14 @@ def pass_ore():
 def pass_greece():
     return render_template('pass_greece.html')
 
+@app.route("/maps/pass_aquarium")
+def pass_aquarium():
+    return render_template('pass_aquarium.html')
+
+@app.route("/maps/pass_park")
+def pass_park():
+    return render_template('pass_park.html')
+
 if __name__ == "__main__":
     port = 5000
     if len(sys.argv) > 1:
