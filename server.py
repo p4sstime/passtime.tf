@@ -100,6 +100,14 @@ def pass_skyline():
 def pass_poptart():
     return render_template('pass_poptart.html')
 
+@app.route("/maps/pass_arena2_seasons")
+def pass_arena2_seasons():
+    return render_template('pass_arena2_seasons.html')
+
+@app.route("/maps/pass_dugout")
+def pass_dugout():
+    return render_template('pass_dugout.html')
+
 if __name__ == "__main__":
     port = 5000
     if len(sys.argv) > 1:
