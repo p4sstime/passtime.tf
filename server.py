@@ -156,6 +156,14 @@ def pass_concepts_laxson():
 def jump_jackingoff():
     return render_template('jump_jackingoff.html')
 
+@app.route("/maps/pass_training_arena")
+def pass_training_arena():
+    return render_template('pass_training_arena.html')
+
+@app.route("/maps/jump_jackjam")
+def jump_jackjam():
+    return render_template('jump_jackjam.html')
+
 if __name__ == "__main__":
     port = 5000
     if len(sys.argv) > 1:
