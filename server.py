@@ -92,6 +92,14 @@ def pass_ruin():
 def pass_tanoa():
     return render_template('pass_tanoa.html')
 
+@app.route("/maps/pass_skyline")
+def pass_skyline():
+    return render_template('pass_skyline.html')
+
+@app.route("/maps/pass_poptart")
+def pass_poptart():
+    return render_template('pass_poptart.html')
+
 if __name__ == "__main__":
     port = 5000
     if len(sys.argv) > 1:
