@@ -108,6 +108,14 @@ def pass_arena2_seasons():
 def pass_dugout():
     return render_template('pass_dugout.html')
 
+@app.route("/maps/pass_arena3")
+def pass_arena3():
+    return render_template('pass_arena3.html')
+
+@app.route("/maps/pass_medieval_arena")
+def pass_medieval_arena():
+    return render_template('pass_medieval_arena.html')
+
 if __name__ == "__main__":
     port = 5000
     if len(sys.argv) > 1:
