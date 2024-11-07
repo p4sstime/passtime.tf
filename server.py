@@ -124,6 +124,14 @@ def pass_waterpolo2():
 def pass_ammo():
     return render_template('pass_ammo.html')
 
+@app.route("/maps/pass_colosseum")
+def pass_colosseum():
+    return render_template('pass_colosseum.html')
+
+@app.route("/maps/pass_smalltown")
+def pass_smalltown():
+    return render_template('pass_smalltown.html')
+
 if __name__ == "__main__":
     port = 5000
     if len(sys.argv) > 1:
