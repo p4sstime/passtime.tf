@@ -148,6 +148,14 @@ def pass_frag():
 def pass_mountain():
     return render_template('pass_mountain.html')
 
+@app.route("/maps/pass_concepts_laxson")
+def pass_concepts_laxson():
+    return render_template('pass_concepts_laxson.html')
+
+@app.route("/maps/jump_jackingoff")
+def jump_jackingoff():
+    return render_template('jump_jackingoff.html')
+
 if __name__ == "__main__":
     port = 5000
     if len(sys.argv) > 1:
