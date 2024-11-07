@@ -1,0 +1,49 @@
+<!--DOCTYPE html-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/stylesheet.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='clipped_wings.ico') }}">
+    <script defer src="{{ url_for('static', filename='js/site.js') }}"></script>
+    <title>pass_tanoa</title>
+    <style>
+        p {
+            text-align: left;
+        }
+        
+        .title{
+            transform: translateY(0%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="topbar">
+        <img class="topbarImage" src="{{ url_for('static', filename='imgs/spooky_big_logo_trans.png') }}" alt="spooky passtime logo">
+    </div>
+    <div class="wrapper">
+            <h1 class="title">pass_tanoa</h1>
+        <main>
+            <div class="sectionBackground">
+                <section id="sectionOne">
+                    <p style="text-indent:none">
+                        The map pass_tanoa created by Shears for the Team Fortress 2 4v4 PASS Time community. 
+                    <br><br>
+                    <a style="font-size:xx-large;" href="https://tf2maps.net/downloads/pass_tanoa.17606/">TF2Maps</a>
+                    <br>
+                    </p>
+                    <p style="text-indent: 3em hanging each-line;">
+                        <a href="https://mega.nz/file/6DYkkLjY#ZbItTBsf5CgvQC9Sj9w3uogZDN0uQRcNmZVk62GJPkc">pass_tanoa_a2</a> - 5/17/24 by Shears @tf2maps<br>
+                        <a href="https://mega.nz/file/mORwAKJR#xddXKVUKXKEZaeRKrYAU6E4xs75D5EciFyuVLD2g9Y8">pass_tanoa_a1</a> - 5/16/24 by Shears @tf2maps
+                </p>
+                <br><br><br> <!--the bottom line gets hidden and idk why so i'm just doing this till it gets fixed. not like it really matters if it gets fixed tho-->
+                </section>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
