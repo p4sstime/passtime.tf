@@ -84,6 +84,14 @@ def pass_aquarium():
 def pass_park():
     return render_template('pass_park.html')
 
+@app.route("/maps/pass_ruin")
+def pass_ruin():
+    return render_template('pass_ruin.html')
+
+@app.route("/maps/pass_tanoa")
+def pass_tanoa():
+    return render_template('pass_tanoa.html')
+
 if __name__ == "__main__":
     port = 5000
     if len(sys.argv) > 1:
