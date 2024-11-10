@@ -255,6 +255,14 @@ def pass_ulama():
 def pass_constantinople():
     return render_template('pass_constantinople.html')
 
+@app.route("/maps/pass_court")
+def pass_court():
+    return render_template('pass_court.html')
+
+@app.route("/maps/poggers")
+def poggers():
+    return render_template('poggers.html')
+
 if __name__ == "__main__":
     port = 5000
     if len(sys.argv) > 1:
