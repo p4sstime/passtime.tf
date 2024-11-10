@@ -1,8 +1,82 @@
 import sys
-
+from dataclasses import dataclass
 from flask import Flask, render_template
 
 app = Flask(__name__)
+
+@dataclass
+class Map:
+    """Class for storing Map data for the pages page."""
+    name: str
+    author: str
+    description: str
+    img_path: str = "imgs/arena2.png"   # TODO: default img?
+    contribution_description: list[str]|None = None
+    alternate_url: str|None = None
+
+maps_dict = {
+    "Active Rotation": [
+        Map("pass_arena2", "Jaguar", "The original.", "imgs/arena2.png", "Contributors: exer, EaasyE, Danmar, Crutch"),
+        Map("pass_stadium", "exer", "The Superbowl, but bigger.", "imgs/stadium.png"),
+        Map("pass_greenhouse", "exer", "Now eco-friendly!", "imgs/greenhouse.png"),
+        Map("pass_stonework", "exer", "Ancient ruins with ancient secrets.", "imgs/stonework.png"),
+        Map("pass_ufo", "DropKnock", "Whoever loses gets probed.", "imgs/ufo.png"),
+        Map("pass_colosseum2", "exer", "A modern reimagining of two classics.", "imgs/colosseum2.png", "Inspired by: obamid"),
+        Map("pass_MannDamm", "owen608", "Stop the Dams.", "imgs/pass_mann_damm_a14.png", alternate_url="maps/pass_manndamm"),
+        Map("pass_maple", "kingfin", "An encapsulation of Autumn.", "imgs/pass_maple_a10.png"),
+
+    ],
+    "Reserve": [
+        Map("pass_aerosol", "flaresh", "Tony Hawk's PASS Time.", "imgs/pass_aerosol_a9.png", "Original Author: obamid"),
+        Map("pass_mario", "kingfin", "Do the Mario!", "imgs/pass_mario_a4.png"),
+        Map("pass_amperage", "exer", "It's not the voltage that kills you...", "imgs/pass_amperage_a11.png"),
+        Map("pass_plexiglass", "ShearsTF", "Jumper's playground.", "imgs/pass_plexiglass.jpg"),
+        Map("pass_torii", "kingfin", "PASS Time ❌<br> PASS Time, Japan ✔️", "imgs/pass_torii_a5.png"),
+        Map("pass_boutique", "kin", "GEM ALERT!!!!!💎💎", "imgs/pass_boutique_b7.png"),
+        Map("pass_ore", "kingfin & Kibble Bites", "COAL ALERT!!!!!🚂🚂", "imgs/pass_ore_a5.png"),
+        Map("pass_greece", "fronz", "Demos kratos.", "imgs/pass_greece_b5.png", "Inspired by pl_odyssey"),
+        Map("pass_aquarium", "Bobby Joe", "The common jack is a powerful, predatory species.", "imgs/pass_aquarium_a15.png"),
+        Map("pass_park", "Bobby Joe", "A third place.", "imgs/pass_park_b27.png", "Original Author: Kibble Bites"),
+        Map("pass_ruin", "DropKnock", "Dunk for your life; satisfy the Mayan gods.", "imgs/pass_ruin_a11.png"),
+        Map("pass_tanoa", "ShearsTF", "Concrete jungle.", "imgs/pass_tanoa_a2.png", "Inspired by arena2"),
+        Map("pass_skyline", "Bobby Joe", "Featuring Neotokyo's most popular bloodsport.", "imgs/pass_skyline_b7.png", "Original Author: Kibble Bites"),
+        Map("pass_poptart", "exer", "Remember him.", "imgs/pass_poptart_a3.png"),
+        Map("pass_arena2 Seasons", "exer", "All the seasons! Fall, Winter, Halloween... Uh.", "imgs/pass_arena2_b8_winter_fix.png", "Built off of arena2", alternate_url="maps/pass_arena2_seasons"),
+        Map("pass_dugout", "Bobby Joe", "BEGIN WORK ZONE. TRAFFIC FINES DOUBLE.", "imgs/pass_dugout_b2.png", "Built off of arena2"),
+        Map("pass_arena3", "exer", "[REDACTED]", "imgs/pass_arena3_a1.png", "Built off of arena2"),
+        Map("pass_medieval_arena", "sagejay", "LARPing is required.", "imgs/pass_medieval_arena_v01.png", "Built off of arena2"),
+        Map("pass_waterpolo2", "Kibble Bites", "So special it has its own whitelist.", "imgs/pass_waterpolo2_a16.png"),
+        Map("pass_ammo", "exer", "Conjured up from another dimension.", "imgs/pass_ammo_b1.png"),
+        Map("pass_colosseum", "obamid", "Are you not entertained!?", "imgs/pass_colosseum_a11.png", "Original Author: waves"),
+        Map("pass_smalltown", "obamid", "Ten paces and turn.", "imgs/pass_smalltown_a3.png", "Original Author: waves"),
+        Map("pass_experiment1", "exer", "Beyond the wall.", "imgs/pass_experiment1_test6.png", "Built off of...gullywash"),
+        Map("arena_glass", "gwd_KOFT", "One and done.", "imgs/pass_experiment1_test6.png"),
+        Map("pass_frag", "UNKNOWN", "Missing info.", "imgs/pass_frag_a6.png"),
+        Map("pass_mountain", "Laxson", "A highly iterated experiment from early PASS Time.", "imgs/pass_mountain_b1.png"),
+        Map("pass_concepts", "Laxson", "A collection of very early tests.", "imgs/pass_football2.png", alternate_url="maps/pass_concepts_laxson"),
+    ],
+    "Jump": [
+        Map("jump_jackingoff", "EaasyE", "T2. The original.", "imgs/jump_jackingoff_a7_rampfix2.png"),
+        Map("pass_training_arena", "owen608", "T2. Welcome to Basic Training.", "imgs/pass_training_arena.png"),
+        Map("jump_jackjam", "exer", "T3. Feeling froggy?", "imgs/jump_jackjam_jam2.png"),
+        Map("jump_elongatedjack", "owen608", "T5. Go nuclear or go home.", "imgs/jump_elongatedjack_a5.png"),
+    ],
+    "Alternative": [
+        Map("cpass_gullywash", "Bobby Joe", "5CP PASS Time. On Gullywash.", "imgs/cpass_gullywash_a1.png", "Built off of..gullywash"),
+        Map("pass_constantinople", "Crutch", "It's kinda green.", "imgs/pass_constantinople_a1.png", "Built off of arena2"),
+        Map("pass_court", "exer", "2v2 BBall. But PASS Time.", "imgs/pass_court_test1.png"),
+        Map("poggers", "EaasyE", "2v2 PASS Time.", "imgs/poggers.png", "Built off of arena2"),
+    ],
+    "Templates": [
+        Map("pass_4v4_template", "exer", "Essential for mappers to create 4v4 PASS Time maps.", "imgs/pass_4v4_template_bobby.png", "Contributor: Bobby Joe"),
+        Map("pass_jump_template", "owen608", "Essential for mappers to create PASS Time jump maps.", "imgs/pass_jump_template.png"),
+    ],
+    "Unplayable": [
+        Map("industry5", "Hu Hubris", "Please hubris i have to play the map before i die.", "imgs/industry5.png"),
+        Map("pass_genesis", "Construction Zombie", "Missing info.", "imgs/pass_genesis_a1.png", "Built off of arena1"),
+        Map("hockey", "weeabruh", "Will be finished soon™", "imgs/hockey.png"),
+    ],
+}
 
 @app.route("/")
 def hello():
@@ -10,7 +84,7 @@ def hello():
 
 @app.route("/maps")
 def maps():
-    return render_template('maps.html')
+    return render_template('maps.html', maps=maps_dict)
 
 @app.route("/maps/pass_arena2")
 def pass_arena2():
