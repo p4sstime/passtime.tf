@@ -10,7 +10,7 @@ class Map:
     name: str
     author: str
     description: str
-    img_path: str = "imgs/arena2.png"   # TODO: default img?
+    img_path: str = "imgs/arena2.png"
     contribution_description: list[str]|None = None
     alternate_url: str|None = None
 
