@@ -50,7 +50,7 @@ maps_dict = {
         Map("pass_colosseum", "obamid", "Are you not entertained!?", "imgs/pass_colosseum_a11.png", "Original Author: waves"),
         Map("pass_smalltown", "obamid", "Ten paces and turn.", "imgs/pass_smalltown_a3.png", "Original Author: waves"),
         Map("pass_experiment1", "exer", "Beyond the wall.", "imgs/pass_experiment1_test6.png", "Built off of...gullywash"),
-        Map("arena_glass", "gwd_KOFT", "One and done.", "imgs/pass_experiment1_test6.png"),
+        Map("arena_glass", "gwd_KOFT", "One and done.", "imgs/arena_glass_a1.png"),
         Map("pass_frag", "UNKNOWN", "Missing info.", "imgs/pass_frag_a6.png"),
         Map("pass_mountain", "Laxson", "A highly iterated experiment from early PASS Time.", "imgs/pass_mountain_b1.png"),
         Map("pass_concepts", "Laxson", "A collection of very early tests.", "imgs/pass_football2.png", alternate_url="maps/pass_concepts_laxson"),
