@@ -239,6 +239,14 @@ def pass_training_arena():
 def jump_jackjam():
     return render_template('jump_jackjam.html')
 
+@app.route("/maps/jump_elongatedjack")
+def jump_elongatedjack():
+    return render_template('jump_elongatedjack.html')
+
+@app.route("/maps/cpass_gullywash")
+def cpass_gullywash():
+    return render_template('cpass_gullywash.html')
+
 if __name__ == "__main__":
     port = 5000
     if len(sys.argv) > 1:
