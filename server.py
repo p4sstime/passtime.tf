@@ -63,6 +63,7 @@ maps_dict = {
     ],
     "Alternative": [
         Map("cpass_gullywash", "Bobby Joe", "5CP PASS Time. On Gullywash.", "imgs/cpass_gullywash_a1.png", "Built off of..gullywash"),
+        Map("pass_ulama", "BurntVenom", "Goals with added security.", "imgs/pass_ulama.jpg"),
         Map("pass_constantinople", "Crutch", "It's kinda green.", "imgs/pass_constantinople_a1.png", "Built off of arena2"),
         Map("pass_court", "exer", "2v2 BBall. But PASS Time.", "imgs/pass_court_test1.png"),
         Map("poggers", "EaasyE", "2v2 PASS Time.", "imgs/poggers.png", "Built off of arena2"),
