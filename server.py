@@ -247,6 +247,14 @@ def jump_elongatedjack():
 def cpass_gullywash():
     return render_template('cpass_gullywash.html')
 
+@app.route("/maps/pass_ulama")
+def pass_ulama():
+    return render_template('pass_ulama.html')
+
+@app.route("/maps/pass_constantinople")
+def pass_constantinople():
+    return render_template('pass_constantinople.html')
+
 if __name__ == "__main__":
     port = 5000
     if len(sys.argv) > 1:
