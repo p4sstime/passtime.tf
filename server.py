@@ -11,7 +11,7 @@ class Map:
     author: str
     description: str
     img_path: str = "imgs/arena2.png"
-    contribution_description: list[str]|None = None
+    contribution_description: str|None = None
     alternate_url: str|None = None
 
 maps_dict = {
