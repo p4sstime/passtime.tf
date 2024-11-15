@@ -73,9 +73,9 @@ maps_dict = {
         Map("pass_jump_template", "owen608", "Essential for mappers to create PASS Time jump maps.", "imgs/pass_jump_template.png"),
     ],
     "Unplayable": [
-        Map("industry5", "Hu Hubris", "Please hubris i have to play the map before i die.", "imgs/industry5.png"),
+        Map("pass_industry5", "Hu Hubris", "Please hubris i have to play the map before i die.", "imgs/industry5.png"),
         Map("pass_genesis", "Construction Zombie", "Missing info.", "imgs/pass_genesis_a1.png", "Built off of arena1"),
-        Map("hockey", "weeabruh", "Will be finished soon™", "imgs/hockey.png"),
+        Map("pass_hockey", "weeabruh", "Will be finished soon™", "imgs/hockey.png"),
     ],
 }
 
@@ -270,6 +270,18 @@ def pass_4v4_template():
 @app.route("/maps/pass_jump_template")
 def pass_jump_template():
     return render_template('pass_jump_template.html')
+
+@app.route("/maps/pass_industry5")
+def pass_industry5():
+    return render_template('pass_industry5.html')
+
+@app.route("/maps/pass_genesis")
+def pass_genesis():
+    return render_template('pass_genesis.html')
+
+@app.route("/maps/pass_hockey")
+def pass_hockey():
+    return render_template('pass_hockey.html')
 
 if __name__ == "__main__":
     port = 5000
