@@ -62,6 +62,7 @@ maps_dict = {
         Map("jump_elongatedjack", "owen608", "T5. Go nuclear or go home.", "imgs/jump_elongatedjack_a5.png"),
     ],
     "Alternative": [
+        Map("pass_krab", "moose", "Lock-off.", "imgs/pass_krab_m1.png"),
         Map("cpass_gullywash", "Bobby Joe", "5CP PASS Time. On Gullywash.", "imgs/cpass_gullywash_a1.png", "Built off of..gullywash"),
         Map("pass_ulama", "BurntVenom", "Goals with added security.", "imgs/pass_ulama.jpg"),
         Map("pass_constantinople", "Crutch", "It's kinda green.", "imgs/pass_constantinople_a1.png", "Built off of arena2"),
@@ -242,6 +243,10 @@ def jump_jackjam():
 @app.route("/maps/jump_elongatedjack")
 def jump_elongatedjack():
     return render_template('jump_elongatedjack.html')
+
+@app.route("/maps/pass_krab")
+def pass_krab():
+    return render_template('pass_krab.html')
 
 @app.route("/maps/cpass_gullywash")
 def cpass_gullywash():
