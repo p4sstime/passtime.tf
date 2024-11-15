@@ -263,6 +263,14 @@ def pass_court():
 def poggers():
     return render_template('poggers.html')
 
+@app.route("/maps/pass_4v4_template")
+def pass_4v4_template():
+    return render_template('pass_4v4_template.html')
+
+@app.route("/maps/pass_jump_template")
+def pass_jump_template():
+    return render_template('pass_jump_template.html')
+
 if __name__ == "__main__":
     port = 5000
     if len(sys.argv) > 1:
