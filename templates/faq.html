@@ -10,6 +10,10 @@
     <script defer src="{{ url_for('static', filename='js/site.js') }}"></script>
     <title>FAQ</title>
     <style>
+        * {
+            overflow: visible !important;
+        }
+
         p {
             text-align: left;
         }
@@ -28,6 +32,11 @@
             border-radius:10px;
             padding-left:6px;
             padding-right:6px;
+        }
+
+        ul {
+            font-family: SourceSans3;
+            font-size: 1.25rem;
         }
     </style>
 </head>
@@ -50,59 +59,34 @@
                     </p>
                         <hr>
                         <h3>Sources used?</h3>
-                    <p style="text-indent:1em hanging">
+                    <p style="text-indent:1em each-line">
                         Since there's a lot that went into this archive, it's important to note where things have been grabbed from to avoid people doing work twice or denote what sources still need to be examined.
                     </p>
-                    <p style="text-indent:1em hanging">
-                        Last scraped all sources April-May 2024. Once I came back in October 2024, IIRC, I searched using <code>has:file</code> and looked at every single file uploaded in the NA Discord between May 2024 and October 2024.
+                    <p style="text-indent:1em each-line">
+                        Last scraped all sources April-May 2024 with Admin permissions (aka I can see everything). Once I came back in October 2024, I scrolled through every thread in <a href="https://discord.com/channels/471798073996345344/1112807704797392997">⁠#maps-feedback</a> looking through all the messages since I left. IIRC, I also searched using <code>has:file</code> and looked at every single file uploaded in the NA Discord between May 2024 and October 2024 without Admin permissions. 
                     </p>
-                        <br><br>
-                        4v4 PASS Time Discord:
-                        Scraped: <a href="https://discord.com/channels/471798073996345344/1112807704797392997">⁠#maps-feedback</a>, <a href="https://discord.com/channels/471798073996345344/526327201591984128">⁠#maps-feedback-and-suggestions-archive</a>, #⁠off-topic, and <a href="https://discord.com/channels/471798073996345344/499849490832949248">⁠#off-topic-legacy</a> by searching with arguments <code>has:file</code>, and then again by "has:link" EXCEPT in #off-topic (4k results)
-                        Scraped: waves message history, sherwood message history that has link/file
-                        Scraped using haystackfs (https://github.com/dhrumilp15/haystackfs), searching for bsp, rar, zip
-                        Scraped using Discrub (https://chromewebstore.google.com/detail/discrub/plhdclenpaecffbcefjmpkkbdpkmhhbj), searching for message content ".bsp" & messages containing file/link
-                        <br><br>
-                        Other Discords:<br>
-                        Scraped: entire 4s PTL (Kibble Pugs) using "has:file" & "has:link".<br>
-                        <br><br>
-                        Also scraped https://tf2maps.net/downloads/categories/4v4-pass-time.99/<br>
-                        <br><br>
-                        Servers (EXHAUSTED):<br>
-                        Laxson<br>
-                        Exer<br>
-                        Jaguar<br>
-                        Jeff21/Cyclopsguy<br>
-                        <br><br>
-                        Servers (ASKED):<br>
-                        Doomsday<br>
-                        <br><br>
-                        Personal map archives (EXHAUSTED):<br>
-                        Poptart - https://drive.google.com/file/d/19PMbLU20p1Q2VONLiatoxrtTebNiZ8ag/view?usp=sharing<br>
-                        Jaguar<br>
-                        cmingus<br>
-                        cyclopsguy<br>
-                        tomatotom<br>
-                        pnd4<br>
-                        weeabruh<br>
-                        Kibble - weeabruh says his archives are most def all wiped<br>
-                        waves<br>
-                        hunter 2.0<br>
-                        DropKnock<br>
-                        Crutch<br>
-                        Panacea<br>
-                        obamid<br>
-                        Griff<br>
-                        exer<br>
-                        <br><br>
-                        Personal map archives (ASKING INFREQUENTLY):<br>
-                        Laxson (has archives on old Win 7 PC but they're out of state)<br>
-                        slamb<br>
-                        <br><br>
-                        Personal VMF archives:<br>
-                        exer (has refused to send VMFs of unfinished maps; includes pass_ammo2)<br>
-                    </p>
-                <br><br><br> <!--the bottom line gets hidden and idk why so i'm just doing this till it gets fixed. not like it really matters if it gets fixed tho-->
+                    
+                    <p style="font-size:x-large;text-decoration:underline">4v4 PASS Time Discord</p>
+                        <p>Scraped:</p>
+                            <ul>
+                                <li><a href="https://discord.com/channels/471798073996345344/1112807704797392997">⁠#maps-feedback</a>, <a href="https://discord.com/channels/471798073996345344/526327201591984128">⁠#maps-feedback-and-suggestions-archive</a>, <span title="Note Oct 2024: I think I archived this a long time ago somewhere deep in #admin-chat. Don't have access anymore so can't confirm">#⁠off-topic*</span>, and <a href="https://discord.com/channels/471798073996345344/499849490832949248">⁠#off-topic-legacy</a> by searching with arguments <code>has:file</code>, and then again by <code>has:link</code> EXCEPT in #off-topic (too many results; over 4k)</li>
+                                <li><code>from:wahvess</code> message history; <code>from:sherwoodfan</code> message history that <code>has:link</code> or <code>has:file</code></li>
+                                <li>entire Discord using <a href="https://github.com/dhrumilp15/haystackfs">haystackfs</a>, searching for bsp, rar, zip</li>
+                                <li>entire Discord using <a href="https://chromewebstore.google.com/detail/discrub/plhdclenpaecffbcefjmpkkbdpkmhhbj">Discrub</a>, searching for message content <code>.bsp</code> with <code>has:link</code> or <code>has:file</code></li>
+                            </ul>             
+                    <p style="font-size:x-large;text-decoration:underline">Other</p>
+                        <p>Scraped:</p>
+                            <ul>
+                                <li>Entire 4s PTL (Kibble Pugs) Discord using <code>has:file</code> & <code>has:link</code>.</li>
+                                <li>All of the <a href="https://tf2maps.net/downloads/categories/4v4-pass-time.99/">4v4 PASS Time TF2Maps page</a></li>
+                                <li>Servers: Laxson, exer, Jaguar, Jeff21/cyclopsguy</li>
+                                <li>Users: <a href="https://drive.google.com/file/d/19PMbLU20p1Q2VONLiatoxrtTebNiZ8ag/view?usp=sharing">Poptart</a>, Jaguar, charlesmingus, cyclopsguy, tomatotom, pnd4, weeabruh, Kibble Bites, waves, Hunter 2.0, DropKnock, Crutch, Panacea, obamid, Griff, exer</li>
+                            </ul>
+                    <p style="font-size:x-large;text-decoration:underline">Remaining Possible Sources</p>
+                        <ul>
+                            <li>Servers: <span title="Doomsday has been MIA for years; likely we will never obtain these">Doomsday*</span></li>
+                            <li>Users: <span title="Laxson has archives on an old Win 7 PC but they're out of state">Laxson*</span>, slamborghini, <span title="Does not want to send VMFs of unfinished maps; includes pass_ammo2">exer's VMFs*</span></li>
+                        </ul>
                 </section>
             </div>
         </main>
