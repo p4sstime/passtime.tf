@@ -88,6 +88,10 @@ def hello():
 def maps():
     return render_template('maps.html', maps=maps_dict)
 
+@app.route("/maps/faq")
+def faq():
+    return render_template('faq.html')
+
 @app.route("/maps/pass_arena2")
 def pass_arena2():
     return render_template('pass_arena2.html')
