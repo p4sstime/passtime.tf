@@ -70,8 +70,8 @@ maps_dict = {
         Map("poggers", "EaasyE", "2v2 PASS Time.", "imgs/poggers.png", "Built off of arena2"),
     ],
     "Templates": [
-        Map("pass_4v4_template", "exer", "Essential for mappers to create 4v4 PASS Time maps.", "imgs/pass_4v4_template_bobby.png", "Contributor: Bobby Joe"),
-        Map("pass_jump_template", "owen608", "Essential for mappers to create PASS Time jump maps.", "imgs/pass_jump_template.png"),
+        Map("pass_4v4_template", "exer", "Essential to create 4v4 PASS Time maps.", "imgs/pass_4v4_template_bobby.png", "Contributor: Bobby Joe"),
+        Map("pass_jump_template", "owen608", "Essential to create PASS Time jump maps.", "imgs/pass_jump_template.png"),
     ],
     "Unplayable": [
         Map("pass_industry5", "Hu Hubris", "Please hubris i have to play the map before i die.", "imgs/industry5.png"),
