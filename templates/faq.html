@@ -1,0 +1,96 @@
+<!--DOCTYPE html-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/stylesheet.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='clipped_wings.ico') }}">
+    <script defer src="{{ url_for('static', filename='js/site.js') }}"></script>
+    <title>FAQ</title>
+    <style>
+        * {
+            overflow: visible !important;
+        }
+
+        p {
+            text-align: left;
+        }
+        
+        .title{
+            transform: translateY(0%);
+        }
+
+        h3 {
+            font-style: italic;
+            margin: 0;
+        }
+
+        code {
+            background-color:rgb(70, 70, 70);
+            border-radius:10px;
+            padding-left:6px;
+            padding-right:6px;
+        }
+
+        ul {
+            font-family: SourceSans3;
+            font-size: 1.25rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="topbar">
+        <img class="topbarImage" src="{{ url_for('static', filename='imgs/spooky_big_logo_trans.png') }}" alt="spooky passtime logo">
+    </div>
+    <div class="wrapper">
+            <h1 class="title">FAQ</h1>
+        <main>
+            <div class="sectionBackground">
+                <section id="sectionOne">
+                    <p>
+                        Created and maintained by blake++.
+                        <br><br>
+                        If you want your map to be part of this archive and listing, it has to either be posted in the <a href="https://na.discord.passtime.tf">NA 4v4 PASS Time Discord</a> or on <a href="https://tf2maps.net/downloads/categories/4v4-pass-time.99/">TF2Maps under the 4v4 PASS Time category</a>. <b>No exceptions!</b>
+                        <br><br>
+                        You can contact me via my <a href="https://blakeplus.plus">website</a> or you can find me in the NA Discord.
+                    </p>
+                        <hr>
+                        <h3>Sources used?</h3>
+                    <p style="text-indent:1em each-line">
+                        Since there's a lot that went into this archive, it's important to note where things have been grabbed from to avoid people doing work twice or denote what sources still need to be examined.
+                    </p>
+                    <p style="text-indent:1em each-line">
+                        Last scraped all sources April-May 2024 with Admin permissions (aka I can see everything). Once I came back in October 2024, I scrolled through every thread in <a href="https://discord.com/channels/471798073996345344/1112807704797392997">⁠#maps-feedback</a> looking through all the messages since I left. IIRC, I also searched using <code>has:file</code> and looked at every single file uploaded in the NA Discord between May 2024 and October 2024 without Admin permissions. 
+                    </p>
+                    
+                    <p style="font-size:x-large;text-decoration:underline">4v4 PASS Time Discord</p>
+                        <p>Scraped:</p>
+                            <ul>
+                                <li><a href="https://discord.com/channels/471798073996345344/1112807704797392997">⁠#maps-feedback</a>, <a href="https://discord.com/channels/471798073996345344/526327201591984128">⁠#maps-feedback-and-suggestions-archive</a>, <span title="Note Oct 2024: I think I archived this a long time ago somewhere deep in #admin-chat. Don't have access anymore so can't confirm">#⁠off-topic*</span>, and <a href="https://discord.com/channels/471798073996345344/499849490832949248">⁠#off-topic-legacy</a> by searching with arguments <code>has:file</code>, and then again by <code>has:link</code> EXCEPT in #off-topic (too many results; over 4k)</li>
+                                <li>waves's & sherwoodfan's message history that <code>has:link</code> or <code>has:file</code></li>
+                                <li>entire Discord using <a href="https://github.com/dhrumilp15/haystackfs">haystackfs</a>, searching for bsp, rar, zip</li>
+                                <li>entire Discord using <a href="https://chromewebstore.google.com/detail/discrub/plhdclenpaecffbcefjmpkkbdpkmhhbj">Discrub</a>, searching for message content <code>.bsp</code> with <code>has:link</code> or <code>has:file</code></li>
+                            </ul>             
+                    <p style="font-size:x-large;text-decoration:underline">Other</p>
+                        <p>Scraped:</p>
+                            <ul>
+                                <li>Entire 4s PTL (Kibble Pugs) Discord using <code>has:file</code> & <code>has:link</code>.</li>
+                                <li>All of the <a href="https://tf2maps.net/downloads/categories/4v4-pass-time.99/">4v4 PASS Time TF2Maps page</a></li>
+                                <li>Servers: Laxson, exer, Jaguar, Jeff21/cyclopsguy</li>
+                                <li>Users: <a href="https://drive.google.com/file/d/19PMbLU20p1Q2VONLiatoxrtTebNiZ8ag/view?usp=sharing">Poptart</a>, Jaguar, charlesmingus, cyclopsguy, tomatotom, pnd4, weeabruh, Kibble Bites, waves, Hunter 2.0, DropKnock, Crutch, Panacea, obamid, Griff, exer</li>
+                            </ul>
+                    <p style="font-size:x-large;text-decoration:underline">Remaining Possible Sources</p>
+                        <ul>
+                            <li>Servers: <a href="https://discord.com/users/394411922037932033" title="Doomsday has been MIA for years; likely we will never obtain these">sd_doomsday</a>*</li>
+                            <li>Users: <span title="Laxson has archives on an old Win 7 PC but they're out of state">Laxson*</span>, slamborghini, <span title="Does not want to send VMFs of unfinished maps; includes pass_ammo2">exer's VMFs*</span></li>
+                        </ul>
+                </section>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
