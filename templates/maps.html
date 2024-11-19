@@ -1,110 +1,143 @@
 <!--DOCTYPE html-->
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/stylesheet.css') }}">
-    <link rel="shortcut icon" href="{{ url_for('static', filename='clipped_wings.ico') }}">
-    <script defer src="{{ url_for('static', filename='js/site.js') }}"></script>
-    <title>Maps</title>
-    <style>
-        header {
-            height: 40%;
-        }
-
-        .title {
-            transform: translateY(0%);
-        }
-
-        p {
-            float: left;
-            margin: auto;
-            line-height: 98%;
-            overflow: visible;
-        }
-
-        button {
-            width: 100%;
-            background-color:#111;
-            border-color:#ffbe2c;
-            color:white;
-        }
-
-        h1 {
-            font-family: SourceSans3;
-            margin-bottom: 0;
-        }
-
-        button:hover {
-            background-color:#1b1b1b;
-        }
-
-        .thumbnails {
-            max-width: 220px;
-            padding: 4px;
-            float: left;
-            padding-right: 6px;
-        }
-    </style>
-</head>
-
-<body>
-    <div class="topbar">
-        <img class="topbarImage" src="{{ url_for('static', filename='imgs/spooky_big_logo_trans.png') }}" alt="spooky passtime logo">
-    </div>
-    <div class="wrapper">
-        <header>
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/stylesheet.css') }}">
+      <link rel="shortcut icon" href="{{ url_for('static', filename='clipped_wings.ico') }}">
+      <script defer src="{{ url_for('static', filename='js/site.js') }}"></script>
+      <title>Maps</title>
+      <style>
+         header {
+         height: 40%;
+         }
+         .title {
+         transform: translateY(0%);
+         }
+         h1 {
+         font-family: SourceSans3;
+         margin-bottom: 0;
+         }
+         .map-card:hover {
+         background-color:#1b1b1b;
+         }
+         .map-card {
+         display: flex;
+         flex-direction: row; 
+         align-items: stretch; /* Make children take full height */
+         padding: 0.5rem;
+         border: 2px solid #ffbe2c;
+         border-radius: 8px;
+         background-color: #111;
+         cursor: pointer;
+	     width: 100%;
+         color:white;
+         }
+         .map-card .map-thumbnail {
+         height: auto;
+         border-radius: 4px;
+         width: 32%;
+		 flex-shrink: 0;
+         }
+         .map-card .map-text {
+         display: flex;
+         flex-direction: column;
+         flex-grow: 1; /* Let this element grow to take available space */
+         justify-content: space-between; /* Push description to the bottom */
+         padding-left: 0.5rem;
+		 container-type: inline-size;
+         }
+         .map-card .map-description {
+         font-size: 5cqw;
+         line-height: 1.5;
+         margin: 0;
+		 text-align: left;
+         }
+         .map-card .map-name {
+         font-size: 7cqw;
+         font-weight: bold;
+         margin: 0;
+		 flex-shrink: 0;
+         }
+         .map-card .map-author {
+         font-size: 5cqw;
+         text-align: right;
+         margin: 0;
+         flex-grow: 1;
+         }
+         .map-card .map-contribution {
+         font-size: 3cqw;
+         margin: 0;
+         }
+         .map-card .map-name-and-author {
+         display: flex;
+         flex-direction: row;
+		 align-items:center;
+		 margin-top: -5px;
+         }
+         .map-link {
+         color:transparent;
+         }
+      </style>
+   </head>
+   <body>
+      <div class="topbar">
+         <img class="topbarImage" src="{{ url_for('static', filename='imgs/spooky_big_logo_trans.png') }}" alt="spooky passtime logo">
+      </div>
+      <div class="wrapper">
+         <header>
             <div class="backgroundsContainer">
-                <img class="showing background" src="{{ url_for('static', filename='imgs/arena2.png') }}">
-                <img class="background" src="{{ url_for('static', filename='imgs/ufo.png') }}">
-                <img class="background" src="{{ url_for('static', filename='imgs/colosseum2.png') }}">
-                <img class="background" src="{{ url_for('static', filename='imgs/greenhouse.png') }}">
-                <img class="background" src="{{ url_for('static', filename='imgs/stadium.png') }}">
-                <img class="background" src="{{ url_for('static', filename='imgs/stonework.png') }}">
+               <img class="showing background" src="{{ url_for('static', filename='imgs/arena2.png') }}">
+               <img class="background" src="{{ url_for('static', filename='imgs/ufo.png') }}">
+               <img class="background" src="{{ url_for('static', filename='imgs/colosseum2.png') }}">
+               <img class="background" src="{{ url_for('static', filename='imgs/greenhouse.png') }}">
+               <img class="background" src="{{ url_for('static', filename='imgs/stadium.png') }}">
+               <img class="background" src="{{ url_for('static', filename='imgs/stonework.png') }}">
             </div>
             <div class="centered titleContainer">
-                <h1 class="title">Maps</h1>
+               <h1 class="title">Maps</h1>
             </div>
-        </header>
-        <main>
+         </header>
+         <main>
             <div class="sectionBackground">
-                <section id="sectionOne" class="hidden">
-					{% for group_name, maps in maps.items() %}
-				
-						<!-- this whole button section is jank as fuck but I DON'T CARE !!!!!!!! feel free to correct this -->
-					<h1>{{ group_name|safe }}</h1>
-						{% for map in maps %}
-							{% if map.alternate_url %}
-							<a href="{{ map.alternate_url }}">
-							{% else %}
-							<a href="maps/{{ map.name }}">
-							{% endif %}
-								<button>
-									<img class="thumbnails" src="{{ url_for('static', filename=map.img_path) }}">
-									<p style="font-size:xx-large;">{{ map.name|safe }}</p><p style="font-size:x-large;float:right">by {{ map.author|safe }}</p>
-									<br><br>
-									{% if map.contribution_description %}
-									<p style="text-align:left;font-size:medium">{{ map.contribution_description|safe }}</p>
-									{% endif %}
-									<br><br><br><br>
-									<p style="text-align:left;font-size:x-large;line-height:100%;">{{ map.description|safe }}</p>
-								</button>
-							</a>
-							<div style="line-height:25%;"><br></div> <!-- this is jank as fuck and I HATE IT !!!!! do not care enough to figure out how to correct it tho-->                    
-						{% endfor %}
-					{% endfor %}
-                    <hr>
-                    <a href="https://mega.nz/folder/7SYVlKLR#DKOJRlWJhHrEMA7hZPZGCg">Full MEGA Folder</a><a style="float:right" href="maps/faq">FAQ</a>
-                    <br>
-                    <a href="https://maps.mevl2.duckdns.org/">Alternate Archive</a>
-                    <br>
-                    <br><br><br> <!--the bottom line gets hidden and idk why so i'm just doing this till it gets fixed. not like it really matters if it gets fixed tho-->
-                </section>
+               <section id="sectionOne" class="hidden">
+                  {% for group_name, maps in maps.items() %}
+                  <h1>{{ group_name|safe }}</h1>
+                  {% for map in maps %}
+                  {% if map.alternate_url %}
+                  <a class="map-link" href="{{ map.alternate_url }}">
+                  {% else %}
+                  <a class="map-link" href="maps/{{ map.name }}">
+                     {% endif %}
+                     <button class="map-card">
+					    <img class="map-thumbnail" src="{{ url_for('static', filename=map.img_path) }}" alt="Map Thumbnail">
+                        <div class="map-text">
+                           <div>
+                              <div class="map-name-and-author">
+                                 <p class="map-name">{{ map.name|safe }}</p>
+                                 <p class="map-author">by {{ map.author|safe }}</p>
+                              </div>
+                              {% if map.contribution_description %}
+                              <p class="map-contribution">{{ map.contribution_description|safe }}</p>
+                              {% endif %}
+                           </div>
+                           <p class="map-description">{{ map.description|safe }}</p>
+                        </div>
+                     </button>
+                  </a>
+                  <div style="line-height:25%;"><br></div>
+                  {% endfor %}
+                  {% endfor %}
+                  <hr>
+                  <a href="https://mega.nz/folder/7SYVlKLR#DKOJRlWJhHrEMA7hZPZGCg">Full MEGA Folder</a><a style="float:right" href="maps/faq">FAQ</a>
+                  <br>
+                  <a href="https://maps.mevl2.duckdns.org/">Alternate Archive</a>
+                  <br>
+                  <br><br><br> <!--the bottom line gets hidden and idk why so i'm just doing this till it gets fixed. not like it really matters if it gets fixed tho-->
+               </section>
             </div>
-        </main>
-    </div>
-</body>
-
+         </main>
+      </div>
+   </body>
 </html>
