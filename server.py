@@ -1,3 +1,4 @@
+from __future__ import annotations
 import sys
 from dataclasses import dataclass
 from flask import Flask, render_template
@@ -300,3 +301,4 @@ if __name__ == "__main__":
         except ValueError:
             print("Invalid port number. Using default port 5000.")
     app.run(host='0.0.0.0', port=port)
+
