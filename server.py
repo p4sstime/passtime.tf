@@ -58,9 +58,9 @@ maps_dict = {
         Map("pass_concepts", "Laxson", "A collection of very early tests.", "imgs/pass_football2.png", alternate_url="maps/pass_concepts_laxson"),
     ],
     "Jump": [
-        Map("jump_jackingoff", "EaasyE", "T2. The original.", "imgs/jump_jackingoff_a7_rampfix2.png"),
         Map("pass_training_arena", "owen608", "T2. Welcome to Basic Training.", "imgs/pass_training_arena.png"),
-        Map("jump_jackjam", "exer", "T3. Feeling froggy?", "imgs/jump_jackjam_jam2.png"),
+        Map("jump_jackingoff", "EaasyE", "T3. The original.", "imgs/jump_jackingoff_a7_rampfix2.png"),
+        Map("jump_jackjam", "exer", "T4. Feeling froggy?", "imgs/jump_jackjam_jam2.png"),
         Map("jump_elongatedjack", "owen608", "T5. Go nuclear or go home.", "imgs/jump_elongatedjack_a5.png"),
     ],
     "Alternative": [
