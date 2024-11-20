@@ -47,7 +47,7 @@ maps_dict = {
         Map("pass_dugout", "Bobby Joe", "BEGIN WORK ZONE. TRAFFIC FINES DOUBLE.", "imgs/pass_dugout_b2.png", "Built off of arena2"),
         Map("pass_arena3", "exer", "[REDACTED]", "imgs/pass_arena3_a1.png", "Built off of arena2"),
         Map("pass_medieval_arena", "sagejay", "LARPing is required.", "imgs/pass_medieval_arena_v01.png", "Built off of arena2"),
-        Map("pass_waterpolo2", "Kibble Bites", "So special it has its own whitelist.", "imgs/pass_waterpolo2_a16.png"),
+        Map("pass_waterpolo2", "Kibble Bites", "So special it has its own whitelist.", "imgs/pass_waterpolo2_b8d.png"),
         Map("pass_ammo", "exer", "Conjured up from another dimension.", "imgs/pass_ammo_b1.png"),
         Map("pass_colosseum", "obamid", "Are you not entertained!?", "imgs/pass_colosseum_a11.png", "Original Author: waves"),
         Map("pass_smalltown", "obamid", "Ten paces and turn.", "imgs/pass_smalltown_a3.png", "Original Author: waves"),
