@@ -41,6 +41,7 @@ maps_dict = {
         Map("pass_ruin", "DropKnock", "Dunk for your life; satisfy the Mayan gods.", "imgs/pass_ruin_a11.png"),
         Map("pass_tanoa", "ShearsTF", "Concrete jungle.", "imgs/pass_tanoa_a2.png", "Inspired by arena2"),
         Map("pass_skyline", "Bobby Joe", "Featuring Neotokyo's most popular bloodsport.", "imgs/pass_skyline_b7.png", "Original Author: Kibble Bites"),
+        Map("pass_junglegroove", "owen608", "His coconut gun can fire in spurts!", "imgs/pass_junglegroove_a10.png"),
         Map("pass_poptart", "exer", "Remember him.", "imgs/pass_poptart_a3.png"),
         Map("pass_arena2 Seasons", "exer", "All the seasons! Fall, Winter, Halloween... Uh.", "imgs/pass_arena2_b8_winter_fix.png", "Built off of arena2", alternate_url="maps/pass_arena2_seasons"),
         Map("pass_dugout", "Bobby Joe", "BEGIN WORK ZONE. TRAFFIC FINES DOUBLE.", "imgs/pass_dugout_b2.png", "Built off of arena2"),
@@ -176,6 +177,10 @@ def pass_tanoa():
 @app.route("/maps/pass_skyline")
 def pass_skyline():
     return render_template('pass_skyline.html')
+
+@app.route("/maps/pass_junglegroove")
+def pass_junglegroove():
+    return render_template('pass_junglegroove.html')
 
 @app.route("/maps/pass_poptart")
 def pass_poptart():
