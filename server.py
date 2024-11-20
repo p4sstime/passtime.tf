@@ -31,7 +31,7 @@ maps_dict = {
         Map("pass_aerosol", "flaresh", "Tony Hawk's PASS Time.", "imgs/pass_aerosol_a9.png", "Original Author: obamid"),
         Map("pass_mario", "kingfin", "Do the Mario!", "imgs/pass_mario_a4.png"),
         Map("pass_amperage", "exer", "It's not the voltage that kills you...", "imgs/pass_amperage_a11.png"),
-        Map("pass_plexiglass", "ShearsTF", "Jumper's playground.", "imgs/pass_plexiglass.jpg"),
+        Map("pass_plexiglass", "ShearsTF", "Jumper's playground.", "imgs/pass_plexiglass.jpg", "Contributor: Danmar"),
         Map("pass_torii", "kingfin", "PASS Time ❌<br> PASS Time, Japan ✔️", "imgs/pass_torii_a5.png"),
         Map("pass_boutique", "kin", "GEM ALERT!!!!!💎💎", "imgs/pass_boutique_b7.png"),
         Map("pass_ore", "kingfin & Kibble Bites", "COAL ALERT!!!!!🚂🚂", "imgs/pass_ore_a5.png"),
