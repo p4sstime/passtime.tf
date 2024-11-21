@@ -112,7 +112,7 @@
                   <a class="map-link" href="maps/{{ map.name }}">
                      {% endif %}
                      <button class="map-card">
-					    <img class="map-thumbnail" src="{{ url_for('static', filename=map.img_path) }}" alt="Map Thumbnail">
+					    <img class="map-thumbnail" src="{{ url_for('static', filename=map.img_path) }}" alt="Map Thumbnail" loading="lazy">
                         <div class="map-text">
                            <div>
                               <div class="map-name-and-author">
