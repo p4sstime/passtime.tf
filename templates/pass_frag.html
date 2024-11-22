@@ -15,7 +15,13 @@
         }
         
         .title{
+            font-size: 2em;
             transform: translateY(0%);
+            position: absolute;
+            left: 0; 
+            right: 0; 
+            margin-inline: auto; 
+            z-index: 1;
         }
     </style>
 </head>
@@ -25,9 +31,12 @@
         <img class="topbarImage" src="{{ url_for('static', filename='imgs/spooky_big_logo_trans.png') }}" alt="spooky passtime logo">
     </div>
     <div class="wrapper">
-            <h1 class="title">pass_frag</h1>
         <main>
             <div class="sectionBackground">
+                <div style="position:relative">
+                    <h1 class="title">pass_frag</h1>
+                    <img style="width:40em;filter:blur(2px);" src="{{ url_for('static', filename='imgs/pass_frag_a6.webp') }}">
+                </div>
                 <section id="sectionOne">
                     <p style="text-indent:none">
                         <a style="text-decoration:none" id="DLButton" onclick=getLatest() href="#"><button class="discordButtons" style="width:100%;height:50px">Download Latest</button></a><br>

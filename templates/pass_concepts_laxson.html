@@ -15,7 +15,13 @@
         }
         
         .title{
+            font-size: 2em;
             transform: translateY(0%);
+            position: absolute;
+            left: 0; 
+            right: 0; 
+            margin-inline: auto; 
+            z-index: 1;
         }
     </style>
 </head>
@@ -25,9 +31,12 @@
         <img class="topbarImage" src="{{ url_for('static', filename='imgs/spooky_big_logo_trans.png') }}" alt="spooky passtime logo">
     </div>
     <div class="wrapper">
-            <h1 class="title">pass_concepts</h1>
         <main>
             <div class="sectionBackground">
+                <div style="position:relative">
+                    <h1 class="title">pass_concepts_laxson</h1>
+                    <img style="width:40em;filter:blur(2px);" src="{{ url_for('static', filename='imgs/pass_football2.webp') }}">
+                </div>
                 <section id="sectionOne">
                     <p style="text-indent:none">
                         The maps created by Laxson for the Team Fortress 2 4v4 PASS Time community. These are all rough concept maps meant to explore what other variants of PASS Time could look like.
