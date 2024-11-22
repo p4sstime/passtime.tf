@@ -45,3 +45,9 @@ function confirmRedirect(url, region)
 		window.location.href=url
 	}
 }
+
+function getLatest() {
+    // automatically get latest map link and put it into the Download Latest button. this reduces work and errors
+    var topLink = document.getElementById("links").getElementsByTagName("a")[0].getAttribute("href");
+    document.getElementById("DLButton").setAttribute("href", topLink);
+}
