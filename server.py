@@ -27,6 +27,7 @@ maps_dict = {
         Map("pass_torii", "kingfin", "PASS Time ❌<br> PASS Time, Japan ✔️", "imgs/pass_torii_a5.webp"),
     ],
     "Reserve": [
+        Map("pass_amsterdam", "flaresh", "Het volgende station is Duivendrecht.", "imgs/pass_amsterdam_72hr_15.webp"),
         Map("pass_aerosol", "flaresh", "Tony Hawk's PASS Time.", "imgs/pass_aerosol_a9.webp", "Original Author: obamid"),
         Map("pass_mario", "kingfin", "Do the Mario!", "imgs/pass_mario_a4.webp"),
         Map("pass_amperage", "exer", "It's not the voltage that kills you...", "imgs/pass_amperage_a11.webp"),
@@ -127,6 +128,10 @@ def pass_manndamm():
 @app.route("/maps/pass_maple")
 def pass_maple():
     return render_template('pass_maple.html')
+
+@app.route("/maps/pass_amsterdam")
+def pass_amsterdam():
+    return render_template('pass_amsterdam.html')
 
 @app.route("/maps/pass_aerosol")
 def pass_aerosol():
