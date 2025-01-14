@@ -215,6 +215,8 @@ header {
     height: 80%;
     transform-style: preserve-3d;
     z-index: -1;
+    margin-left: calc(100vw - 100%);
+    margin-right: 0;
 }
 
 header:before {
