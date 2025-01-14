@@ -20,7 +20,7 @@
 }
 
 .titleContainer {
-    width: 100%;
+    width: 100vw;
     height: 100%;
 }
 
@@ -109,12 +109,13 @@
     font-family: Montserrat;
     color: white;
     text-shadow: 0 0 5px #111;
-    width: 100%;
+    width: 100vw;
     bottom: 50%;
     z-index: 1;
 }
 
 .discordTop {
+    width: 100vw;
     position: relative;
     display: flex;
     grid-column-gap: 2vh;
@@ -123,6 +124,7 @@
 }
 
 .discordBottom {
+    width: 100vw;
     position: relative;
     display: flex;
     grid-column-gap: 2vh;
@@ -215,8 +217,6 @@ header {
     height: 80%;
     transform-style: preserve-3d;
     z-index: -1;
-    margin-left: calc(100vw - 100%);
-    margin-right: 0;
 }
 
 header:before {
